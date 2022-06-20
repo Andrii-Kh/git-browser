@@ -14,7 +14,15 @@ const Main = (props) => {
 
   return (
     <div className="mainPage">
-      <input className="input" id="input-field" value={inputValue} onChange={onChange} />
+      <div className='head'>Enter user name from Git Hub</div>
+      <input
+        className="input"
+        type="text"
+        autoComplete="off"
+        id="input-field"
+        value={inputValue}
+        onChange={onChange}
+      />
       <button className="search-button" type="button" id="search-button" onClick={onClick}>
         Search
       </button>

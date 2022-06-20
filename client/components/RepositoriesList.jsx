@@ -25,18 +25,25 @@ const RepositoriesList = () => {
   return (
     <div>
       <Header userName={userName} />
-      {repo.map((repositoryObj) => {
-        return (
-          <div key={repositoryObj.id}>
-            <div className="repositoryName">
-              <div style={{ width: '130px' }}>Repository name:</div>
-              <div style={{ width: '300px' }}>{repositoryObj.name}</div>
-              <div style={{ width: '40px' }}>Link:</div>
-              <Link to={`${userName}/${repositoryObj.name}`}>{repositoryObj.html_url}</Link>
-            </div>
-          </div>
-        )
-      })}
+      <table className="mx-4">
+        <tbody>
+          <tr>
+            <th>Repository name</th>
+            <th>Link</th>
+          </tr>
+
+          {repo.map((repositoryObj) => {
+            return (
+              <tr key={repositoryObj.id}>
+                <td>{repositoryObj.name}</td>
+                <td>
+                  <Link to={`${userName}/${repositoryObj.name}`}>{repositoryObj.html_url}</Link>
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     </div>
   )
 }

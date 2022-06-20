@@ -6,6 +6,7 @@ const Header = (props) => {
   if (props.repositoryName) {
     return (
       <div className="header">
+        <div id="user-name">User name: {props.userName}</div>
         <div id="repository-name">Repository name: {props.repositoryName}</div>
         <div id="go-repository-list" className="link">
           <Link to={`/${props.userName}`}>Go back to repository list</Link>

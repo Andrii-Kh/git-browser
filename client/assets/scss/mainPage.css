@@ -1,20 +1,23 @@
 .mainPage {
-  display: flex;  
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  font-weight: bold;
 }
 
 .mainPage input {
+  width: 230px;
   border: 2px solid black;
   margin: 5px;
   border-radius: 5px;
 }
 
 .mainPage button {
+  width: 60px;
   border: 2px solid black;
   border-radius: 5px;
   background-color: linen;
-  font-style: italic;
   font-weight: bold;
   color:blue;
   margin: 5px;
